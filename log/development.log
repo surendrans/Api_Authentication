@@ -1,0 +1,1389 @@
+  [1m[36mSQL (31.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (15.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (406.6ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (33.1ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (387.2ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (21.7ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateProjects (20110628173414)
+  [1m[35mSQL (152.7ms)[0m  CREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (76.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110628173414')[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `projects`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `projects`
+
+
+Started GET "/" for 127.0.0.1 at Tue Jun 28 23:04:58 +0530 2011
+
+ActionController::RoutingError (No route matches "/"):
+  
+
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jun 28 23:05:21 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (26.0ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 160ms (Views: 29.3ms | ActiveRecord: 26.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jun 28 23:07:19 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (38.7ms)
+Completed   in 57ms
+
+ActionView::Template::Error (undefined method `user_signed_in?' for #<#<Class:0xb702a820>:0xb7027d78>):
+    17:   </script>
+    18: 	<div id="header">
+    19: 		<div id="user_nav">
+    20:       <% if user_signed_in? %>
+    21:         <%= link_to "Sign out #{current_user.email}", destroy_user_session_path, :class => "small_button" %>
+    22:         <%= link_to "Edit Profile" , edit_user_registration_path , :class => "small_button" %>
+    23:       <% else %>
+  app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb__4218082__612289888_0'
+  app/controllers/projects_controller.rb:7:in `index'
+
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (51.9ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (81.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jun 28 23:07:35 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 14ms (Views: 7.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jun 28 23:08:10 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 14ms (Views: 7.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jun 28 23:08:27 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 14ms (Views: 8.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jun 28 23:11:17 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 62ms (Views: 56.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jun 28 23:11:18 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 15ms (Views: 8.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jun 28 23:11:30 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jun 28 23:13:07 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 14ms (Views: 8.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jun 28 23:14:29 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 15ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jun 28 23:14:38 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 13ms (Views: 7.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at Tue Jun 28 23:15:22 +0530 2011
+  Processing by ProjectsController#new as HTML
+Rendered projects/_form.html.erb (135.8ms)
+Rendered projects/new.html.erb within layouts/application (142.3ms)
+Completed 200 OK in 153ms (Views: 147.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at Tue Jun 28 23:15:28 +0530 2011
+  Processing by ProjectsController#create as HTML
+  Parameters: {"commit"=>"Create Project", "authenticity_token"=>"/OKCSorv6+9LQVzPOVvJBuMHE5FRkMyFqAVFAXXiPDc=", "utf8"=>"✓", "project"=>{"name"=>"Testah", "description"=>"bl", "user"=>""}}
+Completed   in 15ms
+
+NameError (uninitialized constant Project::User):
+  app/controllers/projects_controller.rb:43:in `new'
+  app/controllers/projects_controller.rb:43:in `create'
+
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.7ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.4ms)
+
+
+Started POST "/projects" for 127.0.0.1 at Tue Jun 28 23:15:34 +0530 2011
+  Processing by ProjectsController#create as HTML
+  Parameters: {"commit"=>"Create Project", "authenticity_token"=>"/OKCSorv6+9LQVzPOVvJBuMHE5FRkMyFqAVFAXXiPDc=", "utf8"=>"✓", "project"=>{"name"=>"Testah", "description"=>"bl", "user"=>"1"}}
+Completed   in 14ms
+
+NameError (uninitialized constant Project::User):
+  app/controllers/projects_controller.rb:43:in `new'
+  app/controllers/projects_controller.rb:43:in `create'
+
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.3ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.6ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at Tue Jun 28 23:16:01 +0530 2011
+  Processing by ProjectsController#new as HTML
+Rendered projects/_form.html.erb (15.6ms)
+Rendered projects/new.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 35ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at Tue Jun 28 23:16:08 +0530 2011
+  Processing by ProjectsController#create as HTML
+  Parameters: {"commit"=>"Create Project", "authenticity_token"=>"/OKCSorv6+9LQVzPOVvJBuMHE5FRkMyFqAVFAXXiPDc=", "utf8"=>"✓", "project"=>{"name"=>"Test", "description"=>"blah"}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  describe `projects`
+  [1m[36mAREL (14.6ms)[0m  [1mINSERT INTO `projects` (`updated_at`, `created_at`, `name`, `user_id`, `description`) VALUES ('2011-06-28 17:46:08', '2011-06-28 17:46:08', 'Test', NULL, 'blah')[0m
+  [1m[35mSQL (40.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/projects/1
+Completed 302 Found in 187ms
+
+
+Started GET "/projects/1" for 127.0.0.1 at Tue Jun 28 23:16:08 +0530 2011
+  Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (35.9ms)[0m  [1mSELECT `projects`.* FROM `projects` WHERE `projects`.`id` = 1 LIMIT 1[0m
+Rendered projects/show.html.erb within layouts/application (66.8ms)
+Completed 200 OK in 114ms (Views: 71.6ms | ActiveRecord: 35.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Tue Jun 28 23:16:12 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.3ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 22ms (Views: 14.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Tue Jun 28 23:16:45 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 38ms (Views: 31.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Tue Jun 28 23:16:47 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 30ms (Views: 21.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Tue Jun 28 23:17:40 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 25ms (Views: 18.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Tue Jun 28 23:18:47 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 26ms (Views: 18.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Tue Jun 28 23:19:20 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.7ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 31ms (Views: 19.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Tue Jun 28 23:19:57 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (1.7ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (41.2ms)
+Completed 200 OK in 161ms (Views: 139.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Tue Jun 28 23:21:06 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (13.8ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 50ms (Views: 21.6ms | ActiveRecord: 13.8ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateProjects (20110628173414)
+Migrating to DeviseCreateUsers (20110628175151)
+  [1m[35mSQL (133.0ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `authentication_token` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[35mSQL (223.3ms)[0m  CREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[35mSQL (270.0ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)
+  [1m[36mSQL (43.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110628175151')[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `projects`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `projects`
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+
+
+Started GET "/projects" for 127.0.0.1 at Tue Jun 28 23:35:02 +0530 2011
+  Processing by ProjectsController#index as HTML
+Completed   in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Tue Jun 28 23:35:02 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/devise-1.3.4/app/views/devise/shared/_links.erb (2.3ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/devise-1.3.4/app/views/devise/sessions/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 45ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Tue Jun 28 23:35:08 +0530 2011
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/devise-1.3.4/app/views/devise/shared/_links.erb (2.1ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/devise-1.3.4/app/views/devise/registrations/new.html.erb within layouts/application (70.3ms)
+Completed 200 OK in 85ms (Views: 76.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Tue Jun 28 23:38:14 +0530 2011
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/registrations/new.html.erb within layouts/application (96.4ms)
+Completed   in 131ms
+
+ActionView::Template::Error (undefined method `token_authentications_path' for #<#<Class:0xb6e48de0>:0xb6e47e90>):
+    13:   <%= f.password_field :password_confirmation %></p>
+    14: <p><%= f.label :token_authentication_key %><br />
+    15: <%= resource.authentication_token.blank? ? "Token Empty" : resource.authentication_token %></p>
+    16: <p><%= link_to "Generate Token", token_authentications_path(:user_id => resource.id), :method => :post, :confirm => "Are you sure?"  %>
+    17: <%= link_to "Delete Token", token_authentication_path(resource), :method => :delete, :confirm => "Are you sure?"  %></p>
+    18: <% if resource.authentication_token %>
+    19:   <p>You can use this url to login<br />
+  app/views/devise/registrations/new.html.erb:16:in `_app_views_devise_registrations_new_html_erb__955509090__613271568_0'
+  app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__955509090__613271568_0'
+
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.7ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Tue Jun 28 23:40:27 +0530 2011
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/registrations/new.html.erb within layouts/application (104.3ms)
+Completed   in 151ms
+
+ActionView::Template::Error (undefined method `token_authentications_path' for #<#<Class:0xb6d2470c>:0xb6d237e4>):
+    15:   
+    16:   <p><%= f.label :token_authentication_key %><br />
+    17:     <%= resource.authentication_token.blank? ? "Token Empty" : resource.authentication_token %></p>
+    18:   <p><%= link_to "Generate Token", token_authentications_path(:user_id => resource.id), :method => :post, :confirm => "Are you sure?"  %>
+    19:     <%= link_to "Delete Token", token_authentication_path(resource), :method => :delete, :confirm => "Are you sure?"  %></p>
+    20:   <% if resource.authentication_token %>
+    21:     <p>You can use this url to login<br />
+  app/views/devise/registrations/new.html.erb:18:in `_app_views_devise_registrations_new_html_erb__955509090__613870438_0'
+  app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__955509090__613870438_0'
+
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.7ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (66.9ms)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (105.1ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (190.3ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateProjects (20110628173414)
+  [1m[35mSQL (139.7ms)[0m  CREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (43.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110628173414')[0m
+Migrating to DeviseCreateUsers (20110628175151)
+  [1m[35mSQL (112.1ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `authentication_token` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[35mSQL (290.2ms)[0m  CREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[35mSQL (225.3ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[35mSQL (234.4ms)[0m  CREATE UNIQUE INDEX `index_users_on_authentication_token` ON `users` (`authentication_token`)
+  [1m[36mSQL (43.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110628175151')[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `projects`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `projects`
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Tue Jun 28 23:41:45 +0530 2011
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/registrations/new.html.erb within layouts/application (80.8ms)
+Completed   in 113ms
+
+ActionView::Template::Error (undefined method `token_authentications_path' for #<#<Class:0xb6e47cc4>:0xb6e46d60>):
+    15:   
+    16:   <p><%= f.label :token_authentication_key %><br />
+    17:     <%= resource.authentication_token.blank? ? "Token Empty" : resource.authentication_token %></p>
+    18:   <p><%= link_to "Generate Token", token_authentications_path(:user_id => resource.id), :method => :post, :confirm => "Are you sure?"  %>
+    19:     <%= link_to "Delete Token", token_authentication_path(resource), :method => :delete, :confirm => "Are you sure?"  %></p>
+    20:   <% if resource.authentication_token %>
+    21:     <p>You can use this url to login<br />
+  app/views/devise/registrations/new.html.erb:18:in `_app_views_devise_registrations_new_html_erb__955509090__613273818_0'
+  app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__955509090__613273818_0'
+
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.4ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.5ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Tue Jun 28 23:45:19 +0530 2011
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 108ms (Views: 96.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Tue Jun 28 23:45:33 +0530 2011
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"/OKCSorv6+9LQVzPOVvJBuMHE5FRkMyFqAVFAXXiPDc=", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"surendrans1@spritle.com"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (43.8ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'surendrans1@spritle.com') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 344ms (Views: 20.0ms | ActiveRecord: 44.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at Tue Jun 28 23:45:41 +0530 2011
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"/OKCSorv6+9LQVzPOVvJBuMHE5FRkMyFqAVFAXXiPDc=", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"surendrans1@spritle.com"}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'surendrans1@spritle.com') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `users` (`current_sign_in_ip`, `reset_password_sent_at`, `authentication_token`, `reset_password_token`, `last_sign_in_at`, `remember_created_at`, `sign_in_count`, `updated_at`, `created_at`, `last_sign_in_ip`, `email`, `current_sign_in_at`, `encrypted_password`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, 0, '2011-06-28 18:15:41', '2011-06-28 18:15:41', NULL, 'surendrans1@spritle.com', NULL, '$2a$10$IUYdZp/575XuJC96YY5UReFglt/f1tMbXKhfD7Jx42SdGz4zc5j1i')
+  [1m[36mSQL (70.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (32.4ms)[0m  [1mUPDATE `users` SET `current_sign_in_ip` = '127.0.0.1', `last_sign_in_at` = '2011-06-28 18:15:41', `sign_in_count` = 1, `updated_at` = '2011-06-28 18:15:41', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_at` = '2011-06-28 18:15:41' WHERE `users`.`id` = 1[0m
+  [1m[35mSQL (51.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 290ms
+
+
+Started GET "/projects" for 127.0.0.1 at Tue Jun 28 23:45:41 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 136ms (Views: 8.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Tue Jun 28 23:46:47 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 43ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Tue Jun 28 23:47:12 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (2.6ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 211ms (Views: 14.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Tue Jun 28 23:47:40 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 43ms (Views: 8.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Tue Jun 28 23:53:21 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 40ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Tue Jun 28 23:54:11 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 107ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/gen_apitoken" for 127.0.0.1 at Tue Jun 28 23:54:13 +0530 2011
+  Processing by ProjectsController#gen_user_apitoken as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`authentication_token` = 'axbOsgwKk49U4ij1xiDJ' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE `users` SET `updated_at` = '2011-06-28 18:24:13', `authentication_token` = 'axbOsgwKk49U4ij1xiDJ' WHERE `users`.`id` = 1
+  [1m[36mSQL (78.0ms)[0m  [1mCOMMIT[0m
+Rendered projects/api_token.html.erb within layouts/application (1.7ms)
+Completed   in 113ms
+
+ActionView::Template::Error (undefined method `login' for #<User:0xb6e4c490>):
+    1: Hi <%= current_user.login  %> this is your api token <%=  %> and please don't expose it to others
+  app/views/projects/api_token.html.erb:1:in `_app_views_projects_api_token_html_erb___1071652033__613383728_0'
+  app/controllers/projects_controller.rb:86:in `gen_user_apitoken'
+
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.9ms)
+
+
+Started GET "/user/gen_apitoken" for 127.0.0.1 at Tue Jun 28 23:56:11 +0530 2011
+  Processing by ProjectsController#gen_user_apitoken as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered projects/api_token.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 106ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/gen_apitoken" for 127.0.0.1 at Tue Jun 28 23:56:34 +0530 2011
+  Processing by ProjectsController#gen_user_apitoken as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered projects/api_token.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 48ms (Views: 15.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/gen_apitoken" for 127.0.0.1 at Tue Jun 28 23:56:52 +0530 2011
+  Processing by ProjectsController#gen_user_apitoken as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered projects/api_token.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 94ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/gen_apitoken" for 127.0.0.1 at Tue Jun 28 23:57:32 +0530 2011
+  Processing by ProjectsController#gen_user_apitoken as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered projects/api_token.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 33ms (Views: 7.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Tue Jun 28 23:59:01 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 120ms (Views: 11.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Tue Jun 28 23:59:04 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 46ms (Views: 11.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Tue Jun 28 23:59:46 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (2.3ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (1.4ms)
+Completed   in 127ms
+
+ActionView::Template::Error (wrong number of arguments (2 for 0)):
+    1: <h1>Listing projects</h1>
+    2: <p align="right"><%= link_to_if current_user.authentication_token.nil? "Create Api token", gen_api_token_path %></p>
+    3: <table>
+    4:   <thead>
+    5:   <tr>
+  app/views/projects/index.html.erb:2:in `nil?'
+  app/views/projects/index.html.erb:2:in `_app_views_projects_index_html_erb__870956465__612900528_0'
+  app/controllers/projects_controller.rb:7:in `index'
+
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.2ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Tue Jun 28 23:59:52 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 48ms (Views: 12.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Wed Jun 29 00:01:39 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 45ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Wed Jun 29 00:04:34 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (61.4ms)
+Completed 200 OK in 95ms (Views: 67.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Wed Jun 29 00:04:46 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 45ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Wed Jun 29 00:05:10 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 143ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Wed Jun 29 00:05:22 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 40ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Wed Jun 29 00:09:51 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 38ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at Wed Jun 29 00:10:44 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 43ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:11:16 +0530 2011
+  Processing by ProjectsController#index as HTML
+Completed   in 9ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 00:11:17 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.8ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 31ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/gen_apitoken" for 127.0.0.1 at Wed Jun 29 00:11:47 +0530 2011
+  Processing by ProjectsController#gen_user_apitoken as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered projects/api_token.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 112ms (Views: 12.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Wed Jun 29 00:11:59 +0530 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"Q7kxMZUoxg/UivRAlbJNf0QNyBUi+5nVPEQi/UnIKn0=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"surendrans1@spritle.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'surendrans1@spritle.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE `users` SET `sign_in_count` = 2, `updated_at` = '2011-06-28 18:41:59', `current_sign_in_at` = '2011-06-28 18:41:59' WHERE `users`.`id` = 1[0m
+  [1m[35mSQL (30.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 161ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:11:59 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (58.2ms)
+Completed 200 OK in 87ms (Views: 63.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:12:18 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 39ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:12:30 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 112ms (Views: 11.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:12:52 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 34ms (Views: 7.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:12:57 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`authentication_token` = 'E8SJ4ILo1qs5FpqMIqEz' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE `users` SET `authentication_token` = 'E8SJ4ILo1qs5FpqMIqEz', `updated_at` = '2011-06-28 18:42:57' WHERE `users`.`id` = 1
+  [1m[36mSQL (55.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 150ms (Views: 11.7ms | ActiveRecord: 55.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:13:41 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 36ms (Views: 7.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:13:45 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 94ms (Views: 6.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/gen_apitoken" for 127.0.0.1 at Wed Jun 29 00:14:47 +0530 2011
+  Processing by ProjectsController#gen_user_apitoken as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered projects/api_token.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 40ms (Views: 10.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:14:52 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (2.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 114ms (Views: 10.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:14:56 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 45ms (Views: 13.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:15:43 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 43ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:15:45 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 34ms (Views: 6.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:16:41 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 40ms (Views: 9.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:16:56 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 43ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:17:01 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (2.0ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 167ms (Views: 61.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:17:07 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 73ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:17:19 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 114ms (Views: 9.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:17:45 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 76ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:18:27 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 117ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:18:32 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 28ms (Views: 6.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:18:37 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 94ms (Views: 6.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:18:46 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 51ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:18:49 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 90ms (Views: 6.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:18:51 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 55ms (Views: 14.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:18:58 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 125ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:19:02 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 31ms (Views: 5.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:20:19 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 110ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:20:21 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 30ms (Views: 6.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:20:39 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 58ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:20:40 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 29ms (Views: 5.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:20:44 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 30ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:21:01 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 159ms (Views: 32.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:21:03 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 28ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:21:54 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 146ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:21:56 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 28ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:22:07 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 126ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:22:09 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 27ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:22:22 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 107ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:22:24 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 28ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:22:38 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 117ms (Views: 12.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:22:40 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 28ms (Views: 5.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:22:43 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 27ms (Views: 6.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:23:31 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 46ms (Views: 9.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:23:33 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 25ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:23:35 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 82ms (Views: 6.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:25:23 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 29ms (Views: 6.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:25:28 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 96ms (Views: 63.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:25:30 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 27ms (Views: 5.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:25:34 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 25ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:25:45 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 119ms (Views: 17.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:25:47 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 28ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:25:49 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 81ms (Views: 5.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:25:51 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 26ms (Views: 5.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:25:53 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 25ms (Views: 5.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:26:08 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 28ms (Views: 5.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/gen_apitoken" for 127.0.0.1 at Wed Jun 29 00:26:12 +0530 2011
+  Processing by ProjectsController#gen_user_apitoken as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`authentication_token` = 'Ayqn5RPFxef4zQxh4Id9' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (12.1ms)[0m  UPDATE `users` SET `updated_at` = '2011-06-28 18:56:12', `authentication_token` = 'Ayqn5RPFxef4zQxh4Id9' WHERE `users`.`id` = 1
+  [1m[36mSQL (79.1ms)[0m  [1mCOMMIT[0m
+Rendered projects/api_token.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 124ms (Views: 8.8ms | ActiveRecord: 91.6ms)
+
+
+Started GET "/user/get_user_apitoken" for 127.0.0.1 at Wed Jun 29 00:26:17 +0530 2011
+  Processing by ProjectsController#get_user_apitoken as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 88ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:32:31 +0530 2011
+  Processing by ProjectsController#index as HTML
+Completed   in 9ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 00:32:31 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 34ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 00:32:45 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 34ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 00:49:45 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.8ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 32ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 00:50:27 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 89ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 00:50:30 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 33ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 00:50:55 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 93ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:54:09 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 33ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 00:56:45 +0530 2011
+  Processing by ProjectsController#index as HTML
+Completed   in 10ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 00:56:45 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 40ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 00:56:48 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 42ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 00:56:52 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 46ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 00:56:56 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.8ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 31ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Wed Jun 29 01:01:09 +0530 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"qV6TgJ0kFU8eWKu+ii3xbxiU2LFJGf+XiKU3gWgJ17k=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"sure1n@spritle.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'sure1n@spritle.com' LIMIT 1[0m
+Completed   in 11ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"qV6TgJ0kFU8eWKu+ii3xbxiU2LFJGf+XiKU3gWgJ17k=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"sure1n@spritle.com"}}
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 132ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Wed Jun 29 01:01:28 +0530 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"qV6TgJ0kFU8eWKu+ii3xbxiU2LFJGf+XiKU3gWgJ17k=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"surendrans1@spritle.com"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'surendrans1@spritle.com' LIMIT 1
+Completed   in 118ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"qV6TgJ0kFU8eWKu+ii3xbxiU2LFJGf+XiKU3gWgJ17k=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"surendrans1@spritle.com"}}
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 114ms (Views: 13.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Wed Jun 29 01:01:36 +0530 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"qV6TgJ0kFU8eWKu+ii3xbxiU2LFJGf+XiKU3gWgJ17k=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"surendrans1@spritle.com"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'surendrans1@spritle.com' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2011-06-28 18:41:59', `updated_at` = '2011-06-28 19:31:36', `sign_in_count` = 3, `current_sign_in_at` = '2011-06-28 19:31:36' WHERE `users`.`id` = 1[0m
+  [1m[35mSQL (30.1ms)[0m  COMMIT
+Redirected to http://api1asdasdsad.lvh.me:3000/
+Completed 302 Found in 222ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 01:01:36 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 35ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 01:01:47 +0530 2011
+  Processing by ProjectsController#index as HTML
+Completed   in 7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 01:01:47 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 99ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 01:03:23 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.8ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 32ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Wed Jun 29 01:03:32 +0530 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"wg2FSPoc5cogVoRykDmnGWNsfu2XEkRwdWNtqtc3Plk=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"surendrans1@spritle.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'surendrans1@spritle.com' LIMIT 1[0m
+Completed   in 175ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"wg2FSPoc5cogVoRykDmnGWNsfu2XEkRwdWNtqtc3Plk=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"surendrans1@spritle.com"}}
+Rendered devise/shared/_links.erb (1.8ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 114ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Wed Jun 29 01:03:38 +0530 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"wg2FSPoc5cogVoRykDmnGWNsfu2XEkRwdWNtqtc3Plk=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"surendrans1@spritle.com"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'surendrans1@spritle.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE `users` SET `sign_in_count` = 4, `last_sign_in_at` = '2011-06-28 19:31:36', `updated_at` = '2011-06-28 19:33:38', `current_sign_in_at` = '2011-06-28 19:33:38' WHERE `users`.`id` = 1
+  [1m[36mSQL (29.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://lvh.me:3000/
+Completed 302 Found in 157ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 01:03:38 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 91ms (Views: 8.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 01:04:23 +0530 2011
+  Processing by ProjectsController#index as HTML
+Completed   in 23ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 01:04:23 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 48ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 01:04:33 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Redirected to http://lvh.me:3000/
+Completed 302 Found in 119ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 01:04:33 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 52ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 01:05:10 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 130ms (Views: 11.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 01:05:14 +0530 2011
+  Processing by ProjectsController#index as HTML
+Completed   in 11ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 01:05:14 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 37ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 01:05:19 +0530 2011
+  Processing by ProjectsController#index as HTML
+Completed   in 9ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 01:05:19 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (4.4ms)
+Rendered devise/sessions/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 120ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 01:05:22 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Redirected to http://lvh.me:3000/
+Completed 302 Found in 24ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 01:05:22 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 135ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 01:13:16 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 36ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 01:13:23 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 105ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 01:13:27 +0530 2011
+  Processing by ProjectsController#index as HTML
+Completed   in 8ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 01:13:27 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 31ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 01:13:31 +0530 2011
+  Processing by ProjectsController#index as HTML
+Completed   in 72ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 01:13:31 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 33ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 01:14:02 +0530 2011
+  Processing by ProjectsController#index as HTML
+Completed   in 7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 01:14:02 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 31ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Wed Jun 29 01:14:10 +0530 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"FCS+eYuv4Q9BXSqKlidahkpR/X/i+qXijXDyKrULlak=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"surendrans1@spritle.com"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'surendrans1@spritle.com' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE `users` SET `current_sign_in_at` = '2011-06-28 19:44:10', `sign_in_count` = 5, `last_sign_in_at` = '2011-06-28 19:33:38', `updated_at` = '2011-06-28 19:44:10' WHERE `users`.`id` = 1
+  [1m[36mSQL (88.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://api.lvh.me:3000/
+Completed 302 Found in 218ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 01:14:10 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 33ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 01:14:37 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 97ms (Views: 8.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 01:14:53 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 34ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 01:15:07 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 45ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 01:15:28 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 82ms (Views: 57.6ms | ActiveRecord: 0.2ms)
