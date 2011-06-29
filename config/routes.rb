@@ -1,7 +1,10 @@
 ApiAuthentication::Application.routes.draw do
   devise_for :users
-  constraints :subdomain => "api" do
-    resources :projects
+  resources :projects
+  namespace :api do
+    scope "/v1" do
+      resources :projects
+    end
   end
 
   # The priority is based upon order of creation:

@@ -1387,3 +1387,418 @@ Started GET "/" for 127.0.0.1 at Wed Jun 29 01:15:28 +0530 2011
   [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
 Rendered projects/index.html.erb within layouts/application (4.2ms)
 Completed 200 OK in 82ms (Views: 57.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 11:06:03 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (22.0ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (26.7ms)
+Completed   in 271ms
+
+ActionView::Template::Error (undefined method `authentication_token' for nil:NilClass):
+    1: <h1>Listing projects</h1>
+    2: <p align="right"><%= link_to_if current_user.authentication_token.nil?, "Generate Api token", gen_api_token_path  do
+    3:     link_to("View Api Token", "#", :id => "view_token") + " || " +
+    4:       link_to("Regenerate Api Token", gen_api_token_path, :id => "view_token")
+    5:   end
+  app/views/projects/index.html.erb:2:in `_app_views_projects_index_html_erb__870956465__612656128_0'
+  app/controllers/projects_controller.rb:9:in `index'
+
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.7ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 11:06:31 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at Wed Jun 29 11:06:40 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+Completed   in 5ms
+
+NameError (uninitialized constant Api::ProjectsController::Porject):
+  app/controllers/api/projects_controller.rb:3:in `index'
+
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.5ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at Wed Jun 29 11:07:08 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+Completed 200 OK in 49ms (Views: 48.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at Wed Jun 29 11:07:15 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+Completed   in 1ms
+
+NameError (uninitialized constant Porject):
+  app/controllers/api/projects_controller.rb:3:in `index'
+
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.7ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at Wed Jun 29 11:07:36 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Completed 200 OK in 11ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at Wed Jun 29 11:07:42 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Completed 200 OK in 9ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at Wed Jun 29 11:07:57 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Completed 200 OK in 9ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 11:09:43 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Rendered projects/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 14ms (Views: 7.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at Wed Jun 29 11:09:46 +0530 2011
+  Processing by ProjectsController#new as HTML
+Rendered projects/_form.html.erb (113.6ms)
+Rendered projects/new.html.erb within layouts/application (136.6ms)
+Completed 200 OK in 168ms (Views: 161.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at Wed Jun 29 11:09:56 +0530 2011
+  Processing by ProjectsController#create as HTML
+  Parameters: {"commit"=>"Create Project", "authenticity_token"=>"xE9qJPSsNfs4VJIEjo9DpMwnIMZBL990glWkB4keZZ0=", "utf8"=>"✓", "project"=>{"name"=>"First Project", "description"=>"test"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mdescribe `projects`[0m
+  [1m[35mAREL (68.3ms)[0m  INSERT INTO `projects` (`updated_at`, `created_at`, `user_id`, `description`, `name`) VALUES ('2011-06-29 05:39:56', '2011-06-29 05:39:56', NULL, 'test', 'First Project')
+  [1m[36mSQL (69.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/projects/1
+Completed 302 Found in 280ms
+
+
+Started GET "/projects/1" for 127.0.0.1 at Wed Jun 29 11:09:56 +0530 2011
+  Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT `projects`.* FROM `projects` WHERE `projects`.`id` = 1 LIMIT 1
+Rendered projects/show.html.erb within layouts/application (60.9ms)
+Completed 200 OK in 85ms (Views: 78.3ms | ActiveRecord: 138.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 11:09:59 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 21ms (Views: 14.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at Wed Jun 29 11:10:09 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Completed 200 OK in 14ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at Wed Jun 29 11:11:04 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+Completed   in 8ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 11:11:04 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 63ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at Wed Jun 29 11:11:21 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+Completed   in 7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 11:11:22 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 81ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/projects?api_token=Ayqn5RPFxef4zQxh4Id9" for 127.0.0.1 at Wed Jun 29 11:12:00 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+  Parameters: {"api_token"=>"Ayqn5RPFxef4zQxh4Id9"}
+Completed   in 8ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 11:12:00 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.6ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 30ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/projects?auth_token=Ayqn5RPFxef4zQxh4Id9" for 127.0.0.1 at Wed Jun 29 11:13:15 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+  Parameters: {"auth_token"=>"Ayqn5RPFxef4zQxh4Id9"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`authentication_token` = 'Ayqn5RPFxef4zQxh4Id9' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE `users` SET `sign_in_count` = 6, `last_sign_in_at` = '2011-06-28 19:44:10', `updated_at` = '2011-06-29 05:43:15', `current_sign_in_at` = '2011-06-29 05:43:15' WHERE `users`.`id` = 1[0m
+  [1m[35mSQL (40.0ms)[0m  COMMIT
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Completed 200 OK in 174ms (Views: 2.4ms | ActiveRecord: 41.2ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at Wed Jun 29 11:13:23 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Completed 200 OK in 33ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at Wed Jun 29 11:13:28 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Completed 200 OK in 83ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at Wed Jun 29 11:13:31 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Completed 200 OK in 34ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 11:13:33 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 95ms (Views: 15.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 11:13:52 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (54.1ms)
+Completed 200 OK in 83ms (Views: 58.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 11:13:57 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 44ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at Wed Jun 29 11:14:06 +0530 2011
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 41ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 11:14:07 +0530 2011
+  Processing by ProjectsController#index as HTML
+Completed   in 7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 11:14:07 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 31ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at Wed Jun 29 11:14:13 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+Completed   in 60ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 11:14:13 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 31ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/projects?api_token=Ayqn5RPFxef4zQxh4Id9" for 127.0.0.1 at Wed Jun 29 11:14:25 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+  Parameters: {"api_token"=>"Ayqn5RPFxef4zQxh4Id9"}
+Completed   in 7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 11:14:25 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 89ms (Views: 72.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/projects?api_token=Ayqn5RPFxef4zQxh4Id9" for 127.0.0.1 at Wed Jun 29 11:14:36 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+  Parameters: {"api_token"=>"Ayqn5RPFxef4zQxh4Id9"}
+Completed   in 7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 11:14:36 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 30ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/projects?auth_token=Ayqn5RPFxef4zQxh4Id9" for 127.0.0.1 at Wed Jun 29 11:15:02 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+  Parameters: {"auth_token"=>"Ayqn5RPFxef4zQxh4Id9"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`authentication_token` = 'Ayqn5RPFxef4zQxh4Id9' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2011-06-29 05:43:15', `current_sign_in_at` = '2011-06-29 05:45:02', `sign_in_count` = 7, `updated_at` = '2011-06-29 05:45:02' WHERE `users`.`id` = 1[0m
+  [1m[35mSQL (49.0ms)[0m  COMMIT
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Completed 200 OK in 140ms (Views: 2.4ms | ActiveRecord: 49.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 11:15:10 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 41ms (Views: 16.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 11:16:10 +0530 2011
+  Processing by ProjectsController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Rendered projects/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 113ms (Views: 16.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at Wed Jun 29 11:16:12 +0530 2011
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 74ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 11:16:12 +0530 2011
+  Processing by ProjectsController#index as HTML
+Completed   in 8ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 11:16:12 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.8ms)
+Rendered devise/sessions/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 36ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/projects?auth_token=Ayqn5RPFxef4zQxh4Id9" for 127.0.0.1 at Wed Jun 29 11:16:29 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+  Parameters: {"auth_token"=>"Ayqn5RPFxef4zQxh4Id9"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`authentication_token` = 'Ayqn5RPFxef4zQxh4Id9' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE `users` SET `updated_at` = '2011-06-29 05:46:29', `sign_in_count` = 8, `current_sign_in_at` = '2011-06-29 05:46:29', `last_sign_in_at` = '2011-06-29 05:45:02' WHERE `users`.`id` = 1[0m
+  [1m[35mSQL (34.1ms)[0m  COMMIT
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Completed 200 OK in 140ms (Views: 2.4ms | ActiveRecord: 34.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 11:16:33 +0530 2011
+  Processing by ProjectsController#index as HTML
+Completed   in 8ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 11:16:33 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.6ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 32ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/projects?auth_token=Ayqn5RPFxef4zQxh4Id9" for 127.0.0.1 at Wed Jun 29 11:16:44 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+  Parameters: {"auth_token"=>"Ayqn5RPFxef4zQxh4Id9"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`authentication_token` = 'Ayqn5RPFxef4zQxh4Id9' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE `users` SET `sign_in_count` = 9, `updated_at` = '2011-06-29 05:46:44', `current_sign_in_at` = '2011-06-29 05:46:44', `last_sign_in_at` = '2011-06-29 05:46:29' WHERE `users`.`id` = 1
+  [1m[36mSQL (38.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Completed 200 OK in 135ms (Views: 2.4ms | ActiveRecord: 39.5ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at Wed Jun 29 11:16:48 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+Completed   in 7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 11:16:48 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 32ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/projects.json?auth_token=Ayqn5RPFxef4zQxh4Id9" for 127.0.0.1 at Wed Jun 29 11:17:48 +0530 2011
+  Processing by Api::ProjectsController#index as JSON
+  Parameters: {"auth_token"=>"Ayqn5RPFxef4zQxh4Id9"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`authentication_token` = 'Ayqn5RPFxef4zQxh4Id9' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE `users` SET `updated_at` = '2011-06-29 05:47:48', `current_sign_in_at` = '2011-06-29 05:47:48', `last_sign_in_at` = '2011-06-29 05:46:44', `sign_in_count` = 10 WHERE `users`.`id` = 1[0m
+  [1m[35mSQL (44.4ms)[0m  COMMIT
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `projects`.* FROM `projects`[0m
+Completed 200 OK in 96ms (Views: 6.0ms | ActiveRecord: 45.2ms)
+
+
+Started GET "/api/projects.json" for 127.0.0.1 at Wed Jun 29 11:17:54 +0530 2011
+  Processing by Api::ProjectsController#index as JSON
+Completed   in 7ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Jun 29 11:18:15 +0530 2011
+  Processing by ProjectsController#index as HTML
+Completed   in 7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Jun 29 11:18:15 +0530 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 86ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/projects?auth_token=Ayqn5RPFxef4zQxh4Id9" for 127.0.0.1 at Wed Jun 29 11:19:42 +0530 2011
+
+ActionController::RoutingError (No route matches "/api/projects"):
+  
+
+Rendered /home/suren/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/api/v1/projects?auth_token=Ayqn5RPFxef4zQxh4Id9" for 127.0.0.1 at Wed Jun 29 11:19:48 +0530 2011
+  Processing by Api::ProjectsController#index as HTML
+  Parameters: {"auth_token"=>"Ayqn5RPFxef4zQxh4Id9"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`authentication_token` = 'Ayqn5RPFxef4zQxh4Id9' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2011-06-29 05:47:48', `updated_at` = '2011-06-29 05:49:48', `current_sign_in_at` = '2011-06-29 05:49:48', `sign_in_count` = 11 WHERE `users`.`id` = 1
+  [1m[36mSQL (52.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `projects`.* FROM `projects`
+Completed 200 OK in 156ms (Views: 2.5ms | ActiveRecord: 53.0ms)

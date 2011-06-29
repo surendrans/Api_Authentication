@@ -17,12 +17,12 @@
     </script>
     <div id="header">
       <div id="user_nav">
-<%# if user_signed_in? %>
-<%#= link_to "Sign out #{current_user.email}", destroy_user_session_path, :class => "small_button" %>
-<%#= link_to "Edit Profile" , edit_user_registration_path , :class => "small_button" %>
-<%# else %>
-<%#= link_to "Sign up", new_user_registration_path, :class => "small_button" %>
-<%# end %>
+<% if user_signed_in? %>
+<%= link_to "Sign out #{current_user.email}", destroy_user_session_path, :class => "small_button" %>
+<%= link_to "Edit Profile" , edit_user_registration_path , :class => "small_button" %>
+<% else %>
+<%= link_to "Sign up", new_user_registration_path, :class => "small_button" %>
+<% end %>
       </div>
       <div id="logo" >
         <%= link_to "Api Authentication", "/", :style => "color:#fff;font-weight:bold;font-size:30px" %>
