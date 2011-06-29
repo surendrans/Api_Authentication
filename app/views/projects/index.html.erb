@@ -1,10 +1,12 @@
-<h1>Listing projects</h1>
-<p align="right"><%= link_to_if current_user.authentication_token.nil?, "Generate Api token", gen_api_token_path, :class => "small_button"  do
+<p align="right" ><%= link_to_if current_user.authentication_token.nil?, "Generate Api token", gen_api_token_path, :class => "small_button"  do
     link_to("View Api Token", "#", :id => "view_token", :class => "small_button") + "&nbsp;&nbsp;".html_safe +
       link_to("Regenerate Api Token", gen_api_token_path, :id => "view_token", :class => "small_button")
   end
 %></p>
-<p align="right" id="api_token" style="display:none">asd</p>
+<p align="right" id="api_token" style="display:none"></p>
+<h1>Projects</h1>
+
+
 <%= link_to 'New Project', new_project_path, :class => "small_button" %>
 <table>
   <thead>
@@ -37,10 +39,10 @@
       e.preventDefault();
       if ($('#api_token').css('display') == 'none') {
         $.getJSON('/user/get_user_apitoken', function(data) {
-          $('#api_token').html(data.api_token).show();
+          $('#api_token').html(data.api_token).slideDown();
         });
       } else {
-        $('#api_token').hide()
+        $('#api_token').slideUp()
       }
     });
   });

@@ -166,10 +166,10 @@ fieldset{
 table {
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     font-size: 12px;
-    width: 480px;
+    width: 800px;
     text-align: left;
     border-collapse: collapse;
-    margin: 20px;
+    margin: 20px 0 0 0;
     display: table;
     border-spacing: 2px;
     border-color: gray;
