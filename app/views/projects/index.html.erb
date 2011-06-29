@@ -6,7 +6,7 @@
 <p align="right" id="api_token" style="display:none"></p>
 <h1>Projects</h1>
 
-
+<% if @projects.size > 0 %>
 <%= link_to 'New Project', new_project_path, :class => "small_button" %>
 <table>
   <thead>
@@ -29,9 +29,9 @@
     </tr>
   <% end %>
 </table>
-
-<br />
-
+<% else %>
+<p>Click  <%= link_to 'New Project', new_project_path %> to create new Project</p>
+<% end %>
 
 <script type="text/javascript">
   $(document).ready(function(){

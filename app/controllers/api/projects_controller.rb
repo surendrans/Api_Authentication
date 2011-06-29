@@ -1,5 +1,6 @@
 class Api::ProjectsController < ApplicationController
   def index
-    render :json => Project.all.to_json
+     project = Project.all
+    render :json => project.size > 0 ? project : {:message => "No Projects available"}
   end
 end
