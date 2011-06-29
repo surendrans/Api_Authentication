@@ -2,10 +2,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.xml
   def index
-    p params,"================================"
-    p params[:subdomain]
-    @projects = Project.all
-
+    @projects = current_user.projects
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @projects }
@@ -26,7 +23,7 @@ class ProjectsController < ApplicationController
   # GET /projects/new
   # GET /projects/new.xml
   def new
-    @project = Project.new
+    @project = current_user.projects.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,6 +39,7 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.xml
   def create
+    p params.inspect,"-----------------------------"
     @project = Project.new(params[:project])
 
     respond_to do |format|

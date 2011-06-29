@@ -46,7 +46,7 @@ table {
     width: 800px;
     text-align: left;
     border-collapse: collapse;
-    margin: 20px 0 0 0;
+    margin: 20px 0 20px 0;
     display: table;
     border-spacing: 2px;
     border-color: gray;

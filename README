@@ -1,1 +1,5 @@
 A system by which user is authenticated using the Api key for accessing the api f the system.
+1) Create new User, you will be logged in.
+2) You will find a api generation Button at the right corner of projets index p   age.
+3) Using that api key you can access the projects as json.
+4) json url for projects "/api/v1/projects.xml?auth_token=xxxxxxxxx"
