@@ -153,7 +153,7 @@ legend{
     font-size: 15px;
     background: #BEBEBE;
     padding: 6px;
-    
+
     color: black;
 }
 
@@ -164,50 +164,66 @@ fieldset{
 }
 
 table {
-font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-font-size: 12px;
-width: 480px;
-text-align: left;
-border-collapse: collapse;
-margin: 20px;
-display: table;
-border-spacing: 2px;
-border-color: gray;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;
+    width: 480px;
+    text-align: left;
+    border-collapse: collapse;
+    margin: 20px;
+    display: table;
+    border-spacing: 2px;
+    border-color: gray;
 
 }
 
 th {
-font-weight: normal;
-font-size: 13px;
-color: #039;
-background: #B9C9FE;
-padding: 8px;
+    font-weight: normal;
+    font-size: 13px;
+    color: #039;
+    background: #B9C9FE;
+    padding: 8px;
 }
 thead {
-display: table-header-group;
-vertical-align: middle;
-border-color: inherit;
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
 }
 tbody {
-display: table-row-group;
-vertical-align: middle;
-border-color: inherit;
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
 }
 tr {
-display: table-row;
-vertical-align: inherit;
-border-color: inherit;
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
 }
 table td {
-background: #E8EDFF;
-border-top: 1px solid white;
-color: #669;
-padding: 8px;
+    background: #E8EDFF;
+    border-top: 1px solid white;
+    color: #669;
+    padding: 8px;
 }
 td, th {
-display: table-cell;
-vertical-align: inherit;
+    display: table-cell;
+    vertical-align: inherit;
 }
 table {
 
+}
+
+.user_form input[type='email'], .user_form input[type='text'], .user_form input[type='password']{
+    border: 2px solid #DADADA;
+    display: block;
+    font: bold 13px 'Arial', 'Helvetica', sans-serif;
+    padding: 11px 7px;
+    width: 387px;
+}
+.user_form label{
+    display: block;
+    float: left;
+    font: bold 13px 'Arial','Helvetica',sans-serif;
+    margin: 5px 10px 0 0;
+    text-align: right;
+    width: 150px;
 }
