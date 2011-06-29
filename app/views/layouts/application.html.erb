@@ -11,9 +11,10 @@
   </head>
   <body>
     <script type="text/javascript">
-       Cufon.replace('#logo', { fontFamily: 'Myriad Pro Bold Condensed', hover: true });
+      Cufon.replace('#logo', { fontFamily: 'Myriad Pro Bold Condensed', hover: true });
       Cufon.replace('h2', { fontFamily: 'Myriad Pro Semibold', hover: true });
-        Cufon.replace('label', { fontFamily: 'Myriad Pro Regular', hover: true });
+      Cufon.replace('label', { fontFamily: 'Myriad Pro Regular', hover: true });
+      Cufon.replace('.alert', { fontFamily: 'Myriad Pro Semibold', hover: true });
      
       $(document).ready(function(){
         $('.reflect').reflect();
@@ -26,13 +27,13 @@
           <%= link_to "Edit Profile" , edit_user_registration_path , :class => "small_button" %>
         <% else %>
 
-        
+
           <%= link_to_if params[:controller] !="devise/registrations", "Sign up", new_user_registration_path, :class => "small_button" do
             link_to "Sign in", new_user_session_path, :class => "small_button"
           end%>
 
 
-        
+
         <% end %>
       </div>
       <div id="logo" >
@@ -56,6 +57,10 @@
       <div id="layout">
         <%= yield %>
       </div>
+    </div>
+    <div id="bottom-shadow">
+      <div class="corner" id="left"></div>
+      <div class="corner" id="right"></div>
     </div>
     <div id="footer">
       <div id='copyright'></div>

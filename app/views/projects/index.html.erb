@@ -1,10 +1,11 @@
 <h1>Listing projects</h1>
-<p align="right"><%= link_to_if current_user.authentication_token.nil?, "Generate Api token", gen_api_token_path  do
-    link_to("View Api Token", "#", :id => "view_token") + " || " +
-      link_to("Regenerate Api Token", gen_api_token_path, :id => "view_token")
+<p align="right"><%= link_to_if current_user.authentication_token.nil?, "Generate Api token", gen_api_token_path, :class => "small_button"  do
+    link_to("View Api Token", "#", :id => "view_token", :class => "small_button") + "&nbsp;&nbsp;".html_safe +
+      link_to("Regenerate Api Token", gen_api_token_path, :id => "view_token", :class => "small_button")
   end
 %></p>
 <p align="right" id="api_token" style="display:none">asd</p>
+<%= link_to 'New Project', new_project_path, :class => "small_button" %>
 <table>
   <thead>
     <tr>
@@ -29,7 +30,7 @@
 
 <br />
 
-<%= link_to 'New Project', new_project_path %>
+
 <script type="text/javascript">
   $(document).ready(function(){
     $('#view_token').click(function(e){
